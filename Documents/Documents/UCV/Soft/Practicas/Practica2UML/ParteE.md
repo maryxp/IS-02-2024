@@ -6,6 +6,7 @@ R: Que el paquete “top” tanga una dependencia con el paquete “controllers�
 E2
 
 a. Los paquetes que dependen de threads son: Utils - Controllers - Top
+
 b. 
 Dependencia entrada  = 4 (Threads-Utils-Controllers-Samplers)
 Dependencia salida = 6 (Todos los paquetes)

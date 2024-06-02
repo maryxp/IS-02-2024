@@ -7,7 +7,6 @@ Jugadores <-- EquipoVoley : 6..20 tiene
 Jugadores : numero
 Jugadores : posicion
 
-
 Capitan --|> Jugadores : 1
 
 Juego <-- EquipoVoley : 1..* compite
