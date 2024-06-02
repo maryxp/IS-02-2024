@@ -1,0 +1,46 @@
+@startuml
+
+'Ejercicio D
+
+expresion -|> termino
+expresion2 -|> termino
+
+variable -|> termino
+variable --> expresion
+variable --> expresion2
+variable2 -|> termino
+variable2 --> expresion
+variable2 --> expresion2
+
+
+constante -|> termino
+constante2 -|> termino
+
+expresion  o-- termino : 1erOp
+expresion  o-- termino : 2doOp
+
+variable : nombre = y
+variable2 : nombre = x
+
+constante : valor = 2
+constante2 : valor = 3
+
+expresion : op_binario = +
+expresion2 : op_binario2 = /
+
+formacion1 <-- expresion  
+formacion1 <-- expresion2
+formacion1 : f1 = x+y/2
+formacion2 : f2 = x/3+y
+
+formacion2 <-- expresion  
+formacion2 <-- expresion2
+
+formacion1 <.. resultFinal : /
+formacion2 <.. resultFinal : /
+resultFinal : res = (x+y/2) / (x/3+y)   
+'La expresion almacenada en "res" se encuentra en el campo de metodos
+'debido a que si le borramos los parentesis no se sabe que se opera primero
+
+
+@enduml

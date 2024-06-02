@@ -1,0 +1,50 @@
+@startuml
+'C1
+
+Punto --|> Poligono
+Punto : coor.X
+Punto : coor.Y
+
+
+'C2
+
+triangulo1 --|> Poligono2
+punto1 *-- triangulo1
+punto1 : coor.X=0
+punto1 : coor.Y=0
+punto2 *-- triangulo1
+punto2 : coor.X=10
+punto2 : coor.Y=0
+punto3 *-- triangulo1
+punto3 : coor.X=10
+punto3 : coor.Y=10
+
+triangulo2 --|> Poligono2
+punto4 *-- triangulo2
+punto4 : coor.X=2
+punto4 : coor.Y=2
+punto5 *-- triangulo2
+punto5 : coor.X=10
+punto5 : coor.Y=2
+punto3 *-- triangulo2
+
+
+'C3
+
+Punto6 -- Poligono3
+Punto6 : coor.X=0
+Punto6 : coor.Y=0
+
+Punto7 -- Poligono3
+Punto7 : coor.X=1
+Punto7 : coor.Y=0
+
+Punto8 -- Poligono3
+Punto8 : coor.X=0
+Punto8 : coor.Y=1
+
+Punto9 -- Poligono3
+Punto9 : coor.X=1
+Punto9 : coor.Y=1
+
+@enduml

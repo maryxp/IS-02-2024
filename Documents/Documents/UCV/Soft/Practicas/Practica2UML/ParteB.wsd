@@ -1,0 +1,68 @@
+@startuml
+
+'1
+teclado --* teclas : 105
+
+'2
+persona <|- estudiante
+persona <|- profesor
+persona <|- empleado
+
+'3
+Discoduro --* pistas
+pistas --* sectores
+
+'4
+poligono <|- triangulo
+triangulo --* lados : 3 
+
+'5
+equipo --* jugadores
+equipo  --o estadio
+
+'6
+persona2 <|- coordinador 
+comite --* persona2 : 2..*
+persona2 --> comite : 1..* coordina
+comite --> coordinador : tiene 1
+coordinador --o comite
+
+'7 Dependencia
+elemento --* caracterizacion
+caracterizacion <..* criterio : 1..*
+
+'8 
+lab --* equipo2 : 1..*
+lab <|- labNuclear
+equipo2 <|-- equipoNuclear 
+labNuclear --> equipoNucluar : 1..*
+
+'9
+Operando <|-- UFC
+Operando <|-- TCF
+FP --* UFC
+FP --* TCF
+TCF *--> FI :14
+
+'10
+estudiante2 <|-- EstPregrado
+estudiante2 <|--  EstPostgrado
+EstPregrado <-- TEG : 1..2 realizado
+EstPostgrado <-- TGM : 1 realizado
+trabajoDeInvestigacion <|-- TEG
+trabajoDeInvestigacion <|-- TGM 
+profesor2 --> trabajoDeInvestigacion : 1..* dirige
+profesor2 <-- trabajoDeInvestigacion : 1..2 dirigido
+profesor2 --o tutor
+
+'11
+DocGrafico --* hoja
+hoja --* dibujo : 1
+dibujo --> texto
+dibujo --> fig2D
+dibujo <-- grupo :2..*
+dibujo --> grupo : 1 esMiembro
+circulo --o fig2D
+cuadrado --o fig2D
+
+@enduml

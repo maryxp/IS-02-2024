@@ -1,0 +1,26 @@
+'F.A: Diagrama de objetos
+
+EquipoVoley : nombre = Aragua Voleibol Club
+EquipoVoley : registro = 1548
+
+Jugadores <-- EquipoVoley : 6..20 tiene
+Jugadores : numero = 5
+Jugadores : posicion = defensor
+
+
+Capitan --|> Jugadores : 1
+
+Juego <-- EquipoVoley : 1..* compite
+Juego : localidad = chile
+Juego : puntuacion = 7
+
+Entrenador <-- EquipoVoley : 1 tiene
+EquipoVoley <-- Entrenador : 1..* entrena
+Entrenador : nivelAcreditacion = 4
+Entrenador : añosExperiencia = 30
+
+Jugadores --|> Persona
+Entrenador --|> Persona
+Persona : telefono = 04164567952
+Persona : nombre = michael
+Persona : direccion = santiago
