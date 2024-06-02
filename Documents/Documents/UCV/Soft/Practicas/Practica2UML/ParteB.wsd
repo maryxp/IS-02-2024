@@ -1,5 +1,7 @@
 @startuml
 
+'Realizado por Andreina Velasquez y Maria Laura DP
+
 '1
 teclado --* teclas : 105
 
