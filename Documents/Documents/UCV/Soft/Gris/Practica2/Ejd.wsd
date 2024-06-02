@@ -1,0 +1,38 @@
+termino <|-- expresion
+termino <|-- variable
+termino <|-- constante
+termino <|-- expresion2
+termino <|-- variable2
+termino <|-- constante2
+
+variable : nombre = x
+variable2 : nombre = y
+
+
+expresion : operadorBinario = + 
+expresion2 : operadorBinario = /
+
+constante : val = 2
+constante2 : val = 3
+
+variable --> expresion
+variable --> expresion2
+variable2 --> expresion
+variable2 --> expresion2
+constante --> expresion
+constante --> expresion2
+constante2 --> expresion
+constante2 --> expresion2
+
+expresion --o expresionFormada
+expresion2 --o expresionFormada
+expresionFormada : f = x+y/2
+
+expresion --o expresionFormada2
+expresion2 --o expresionFormada2
+expresionFormada2 : f = x/3+y
+
+resultante *-- expresionFormada
+resultante *-- expresionFormada2
+resultante : result = (x+y/2) / (x/3+y)
+

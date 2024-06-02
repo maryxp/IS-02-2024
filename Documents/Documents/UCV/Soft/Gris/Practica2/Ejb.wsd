@@ -1,0 +1,68 @@
+'1
+
+teclado --* teclas : 105
+
+'2
+persona <|-- estudiante
+persona <|-- profesores
+persona <|-- empleados
+
+'3
+
+Pistas *..>  DiscoDuro
+Secotres *..>  DiscoDuro
+
+'4
+poligono <|-- triangulo
+triangulo --* lados : 3
+
+'5
+
+baseball --* jugadores
+jugadores ..> homeclub
+homeclub --o estadio
+
+'6
+comite --* persona2 : 2...*
+persona2 --> comite : 1...* coordinar 
+coordinador --|> persona2
+comite --> coordinador : 1 tiene
+coordinador --o comite : parteDe
+
+'7
+elementoClasificado *-- caracterizacion
+caracterizacion <..* criterio : 1..*
+
+'8
+laboratorio --* equipos : 1..*
+equipos <|-- equipoNuclear
+laboratorio <|-- laboratorioNuclear
+laboratorioNuclear --> equipoNuclear : tiene 1..*
+
+'9
+ecuacionFP --* operandos : 2
+UFC <|-- operandos
+TCF <|-- operandos
+TCF ..> FI : 14
+
+'10
+trabajoInvestigacion --> profesor : 1..2 dirigido
+TGE <|-- trabajoInvestigacion
+TGM <|-- trabajoInvestigacion
+profesor --o tutor
+profesor --> trabajoInvestigacion : 1..* puedeDirigir
+estudiantePost --|> estudiante2
+estudiantePre --|> estudiante2
+TGM ..> estudiantePost
+TGE --> estudiantePre : 1..2 realizado
+
+'11
+documentoGrafico *-- hoja
+hoja --* objetoDibujo
+objetoDibujo --> texto
+objetoDibujo --> fig2D
+grupo --> objetoDibujo : 2..* constaDe
+objetoDibujo --> grupo : 1 
+fig2D --> circulo
+fig2D --> cuadrado
+

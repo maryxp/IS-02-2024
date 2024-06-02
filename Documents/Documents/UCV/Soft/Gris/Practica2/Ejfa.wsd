@@ -1,0 +1,24 @@
+'Diag de clase
+
+equipoVoley ..> jugadores : tiene 6..20
+jugadores : numero
+jugadores : posicion
+jugadores <|-- capitan : 1
+
+equipoVoley : nombre
+equipoVoley : registro
+
+juego <-- equipoVoley : compite 1..*
+juego : localidad
+juego : puntuacion 
+
+entrenador <-- equipoVoley : tiene 1
+entrenador --> equipoVoley : entrena 1..*
+entrenador : nivelAcredit
+entrenador : nivelExperienc
+
+entrenador --|> persona 
+jugador --|> persona
+persona : telef
+persona : nombre
+persona : direccion

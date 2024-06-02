@@ -1,0 +1,46 @@
+'C1
+
+poligono *-- punto
+punto : coordX
+punto : coordY
+
+'C2
+
+poligono2 <|-- triang1
+poligono2 <|-- triang2
+lado1 *-- triang1
+lado1 : coordX = 0
+lado1 : coordX = 0
+lado2 *-- triang1
+lado2 : coordX = 0
+lado2 : coordX = 0
+lado3 *-- triang1
+lado3 : coordX = 0
+lado3 : coordX = 0
+
+
+lado3 *-- triang2
+lado4 *-- triang2
+lado4 : coordX = 0
+lado4 : coordX = 0
+lado5 *-- triang2
+lado5 : coordX = 0
+lado5 : coordX = 0
+
+'C3
+
+p1 -- poligono3
+p1 : coordX = 0
+p1 : coordY = 0
+
+p2 -- poligono3
+p2 : coordX = 1
+p2 : coordY = 0
+
+p3 -- poligono3
+p3 : coordX = 0
+p3 : coordY = 1
+
+p4 -- poligono3
+p4 : coordX = 1
+p4 : coordY = 1

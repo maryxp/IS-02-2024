@@ -1,0 +1,24 @@
+'Diag de objetos
+
+equipoVoley ..> jugadores : tiene 6..20
+jugadores : numero = 3
+jugadores : posicion = 20
+jugadores <|-- capitan : 1
+
+equipoVoley : nombre = Portugueseños Voleibol Club
+equipoVoley : registro = 8987
+
+juego <-- equipoVoley : compite 1..*
+juego : localidad = chile
+juego : puntuacion = 9
+
+entrenador <-- equipoVoley : tiene 1
+entrenador --> equipoVoley : entrena 1..*
+entrenador : nivelAcredit = 5
+entrenador : nivelExperienc = 30
+
+entrenador --|> persona 
+jugador --|> persona
+persona : telef = 04127568412
+persona : nombre = Roosvuelt Río
+persona : direccion = santiagoDeChile
